@@ -6,8 +6,14 @@ export class Group extends BaseEntity {
   id!: number;
 
   @Column()
-  name!: string;
+  name: string;
 
   @Column((type) => User)
-  users!: User[];
+  users: User[];
+
+  constructor(name: string, users: Array<User>) {
+    super();
+    this.name = name;
+    this.users = users;
+  }
 }

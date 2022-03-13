@@ -2,7 +2,7 @@ import { Group } from "./entity/Group";
 import express from "express";
 import { Connection, createConnection } from "typeorm";
 import { User } from "./entity/User";
-import { userRoutes } from "./routes";
+import { groupRoutes, userRoutes } from "./routes";
 
 createConnection()
   .then(async (connection: Connection) => {
@@ -12,6 +12,7 @@ createConnection()
     app.use(express.json());
 
     app.use("/api/user", userRoutes);
+    app.use("/api/group", groupRoutes);
 
     app.listen(3000, () => {
       console.log("server start");
