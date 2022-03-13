@@ -1,0 +1,10 @@
+{
+  "type": "mongodb",
+  "url": "mongodb+srv://test:test@cluster0.n5hfy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "database": "User_Group",
+  "userNewUrlParser": true,
+  "useUnifiedTopology": true,
+  "synchronize": true,
+  "logging": true,
+  "entities": ["src/entity/*.ts"]
+}
